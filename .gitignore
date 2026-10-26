@@ -1,0 +1,20 @@
+# Build output, caches and generated site
+build/
+twister-out/
+site/
+.ccache/
+__pycache__/
+*.py[cod]
+.venv/
+
+# Local IDE and OS files
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Libero SoC project output (the design itself is versioned in hardware/)
+*.log
+designer/
+synthesis/
+simulation/

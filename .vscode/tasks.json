@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Article: Update workspace",
+            "type": "shell",
+            "command": "bash scripts/setup.sh",
+            "problemMatcher": []
+        },
+        {
+            "label": "Article: Build slave for M2S010 MKR Kit",
+            "type": "shell",
+            "command": "west build -p auto -b m2s010_mkr_kit/m2s010 -d /workspace/build /workspace/modules/lib/baton-c/zephyr/samples/baton_node",
+            "group": { "kind": "build", "isDefault": true },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Article: Flash M2S010 MKR Kit",
+            "type": "shell",
+            "command": "west flash -d /workspace/build --runner openocd",
+            "problemMatcher": []
+        },
+        {
+            "label": "Article: Run tests (twister)",
+            "type": "shell",
+            "command": "bash scripts/test.sh && python scripts/evidence.py",
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Article: Preview website",
+            "type": "shell",
+            "command": "mkdocs serve -a 0.0.0.0:8000",
+            "isBackground": true,
+            "problemMatcher": []
+        }
+    ]
+}

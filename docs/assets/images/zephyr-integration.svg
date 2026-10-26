@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" width="980" height="520" role="img" aria-label="Baton-C as a Zephyr module: layers and data flow">
+<title>Baton-C as a Zephyr module: layers and data flow</title>
+<defs><marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5A6472"/></marker><marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0F8B9A"/></marker><marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E07A00"/></marker><marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E5AA8"/></marker></defs>
+<rect x="0" y="0" width="980" height="520" rx="12" fill="#FFFFFF"/>
+<text x="130" y="40" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="12" font-weight="bold" fill="#5A6472" text-anchor="middle">BUILD TIME</text>
+<rect x="30" y="60" width="200" height="120" rx="10" fill="#F2F5FA" stroke="#0F8B9A" stroke-width="1.5"/>
+<text x="130" y="86" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="15" font-weight="bold" fill="#0B2545" text-anchor="middle">Devicetree</text>
+<text x="130" y="108" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="11" font-weight="normal" fill="#5A6472" text-anchor="middle">&amp;uart1 { baton0: baton {</text>
+<text x="130" y="126" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="11" font-weight="normal" fill="#5A6472" text-anchor="middle">role = "slave";</text>
+<text x="130" y="144" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="11" font-weight="normal" fill="#5A6472" text-anchor="middle">address = &lt;0x12&gt;; ... } }</text>
+<text x="130" y="166" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="12" font-weight="normal" fill="#0F8B9A" text-anchor="middle">one device per node</text>
+<rect x="30" y="200" width="200" height="90" rx="10" fill="#F2F5FA" stroke="#0F8B9A" stroke-width="1.5"/>
+<text x="130" y="226" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="15" font-weight="bold" fill="#0B2545" text-anchor="middle">Kconfig</text>
+<text x="130" y="248" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="11" font-weight="normal" fill="#5A6472" text-anchor="middle">CONFIG_BATON (auto)</text>
+<text x="130" y="266" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="12" font-weight="normal" fill="#5A6472" text-anchor="middle">stack, priority, period</text>
+<rect x="30" y="310" width="200" height="90" rx="10" fill="#F2F5FA" stroke="#0F8B9A" stroke-width="1.5"/>
+<text x="130" y="336" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="14" font-weight="bold" fill="#0B2545" text-anchor="middle">baton_user_config.h</text>
+<text x="130" y="358" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="12" font-weight="normal" fill="#5A6472" text-anchor="middle">message lists, sizes</text>
+<text x="130" y="376" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="12" font-weight="normal" fill="#5A6472" text-anchor="middle">identical on every node</text>
+<line x1="232" y1="120" x2="300" y2="120" stroke="#0F8B9A" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrow-teal)"/>
+<line x1="232" y1="245" x2="300" y2="245" stroke="#0F8B9A" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrow-teal)"/>
+<line x1="232" y1="355" x2="300" y2="355" stroke="#0F8B9A" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrow-teal)"/>
+<text x="560" y="40" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="12" font-weight="bold" fill="#5A6472" text-anchor="middle">RUN TIME</text>
+<rect x="310" y="60" width="500" height="56" rx="10" fill="#0B2545" stroke="#0B2545" stroke-width="1.5"/>
+<text x="560" y="85" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Application</text>
+<text x="560" y="105" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="12" font-weight="normal" fill="#C9D6EA" text-anchor="middle">baton_zephyr_send() · publish() · callbacks</text>
+<rect x="310" y="140" width="500" height="120" rx="10" fill="#F2F5FA" stroke="#1E5AA8" stroke-width="1.5"/>
+<text x="560" y="162" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="14" font-weight="bold" fill="#0B2545" text-anchor="middle">Baton-C Zephyr module  (zephyr/baton_zephyr.c)</text>
+<rect x="330" y="176" width="220" height="70" rx="8" fill="#FFFFFF" stroke="#1E5AA8" stroke-width="1.5"/>
+<text x="440" y="200" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="13" font-weight="bold" fill="#0B2545" text-anchor="middle">Protocol thread</text>
+<text x="440" y="220" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="11" font-weight="normal" fill="#5A6472" text-anchor="middle">baton_node_process()</text>
+<text x="440" y="237" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="11" font-weight="normal" fill="#5A6472" text-anchor="middle">k_sem wake · 1 ms period</text>
+<rect x="570" y="176" width="220" height="70" rx="8" fill="#FFFFFF" stroke="#1E5AA8" stroke-width="1.5"/>
+<text x="680" y="200" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="13" font-weight="bold" fill="#0B2545" text-anchor="middle">UART interrupt</text>
+<text x="680" y="220" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="11" font-weight="normal" fill="#5A6472" text-anchor="middle">rx → baton_node_rx_isr()</text>
+<text x="680" y="237" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="11" font-weight="normal" fill="#5A6472" text-anchor="middle">tx FIFO fill · echo → DE off</text>
+<rect x="310" y="284" width="500" height="56" rx="10" fill="#FFFFFF" stroke="#1E5AA8" stroke-width="1.5"/>
+<text x="560" y="308" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="14" font-weight="bold" fill="#0B2545" text-anchor="middle">Baton-C core  (src/, MISRA C:2012, no heap)</text>
+<text x="560" y="328" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="12" font-weight="normal" fill="#5A6472" text-anchor="middle">schedule · TLV packing · ACK/retry · dedup · TTL</text>
+<rect x="310" y="364" width="500" height="50" rx="10" fill="#F2F5FA" stroke="#5A6472" stroke-width="1.5"/>
+<text x="560" y="394" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="13" font-weight="normal" fill="#0B2545" text-anchor="middle">Zephyr UART driver  (interrupt-driven API, e.g. ns16550)</text>
+<line x1="560" y1="118" x2="560" y2="138" stroke="#5A6472" stroke-width="1.6" marker-end="url(#arrow-grey)"/>
+<line x1="440" y1="248" x2="440" y2="282" stroke="#5A6472" stroke-width="1.6" marker-start="url(#arrow-grey)" marker-end="url(#arrow-grey)"/>
+<line x1="680" y1="248" x2="680" y2="282" stroke="#5A6472" stroke-width="1.6" marker-start="url(#arrow-grey)" marker-end="url(#arrow-grey)"/>
+<line x1="680" y1="362" x2="680" y2="342" stroke="#5A6472" stroke-width="1.6" marker-end="url(#arrow-grey)"/>
+<line x1="560" y1="416" x2="560" y2="452" stroke="#E07A00" stroke-width="2.2" marker-start="url(#arrow-orange)" marker-end="url(#arrow-orange)"/>
+<line x1="250" y1="468" x2="870" y2="468" stroke="#E07A00" stroke-width="4"/>
+<text x="560" y="495" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="13" font-weight="bold" fill="#E07A00" text-anchor="middle">one shared wire: single-wire UART, open drain or RS-485 with echo</text>
+<rect x="830" y="140" width="130" height="120" rx="10" fill="#F2F5FA" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="895" y="166" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="13" font-weight="bold" fill="#2E7D32" text-anchor="middle">k_spinlock</text>
+<text x="895" y="188" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="12" font-weight="normal" fill="#5A6472" text-anchor="middle">per node</text>
+<text x="895" y="212" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="12" font-weight="normal" fill="#5A6472" text-anchor="middle">ISR + send/</text>
+<text x="895" y="230" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="12" font-weight="normal" fill="#5A6472" text-anchor="middle">publish from</text>
+<text x="895" y="248" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="12" font-weight="normal" fill="#5A6472" text-anchor="middle">any thread</text>
+</svg>

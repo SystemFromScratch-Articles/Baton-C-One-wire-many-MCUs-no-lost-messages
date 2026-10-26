@@ -1,0 +1,90 @@
+site_name: "Baton-C on Zephyr"
+site_description: >-
+  One wire, many MCUs, no lost messages: Baton-C, a deterministic single-wire UART bus in
+  MISRA C, as a Zephyr module. Design, native_sim bus tests with line noise, and the
+  bring-up on a Microchip SmartFusion2 board.
+site_author: Anton Vynohradov
+site_url: https://systemfromscratch-articles.github.io/Baton-C-One-wire-many-MCUs-no-lost-messages/
+repo_url: https://github.com/SystemFromScratch-Articles/Baton-C-One-wire-many-MCUs-no-lost-messages
+repo_name: Baton-C-One-wire-many-MCUs-no-lost-messages
+edit_uri: ""
+copyright: >-
+  Copyright &copy; 2026 Anton Vynohradov ·
+  <a href="https://systemfromscratch.com">SystemFromScratch®</a> ·
+  Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>
+
+nav:
+  - Article: index.md
+  - Evidence: results.md
+  - Hardware: hardware.md
+  - Reproduce: reproduce.md
+  - Upstream: upstream.md
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  logo: assets/images/brand/systemfromscratch-logo-on-dark.png
+  favicon: assets/images/brand/systemfromscratch-logo.png
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - navigation.instant
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/AntonVynohradov/Baton-C
+      name: Baton-C on GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/vynohradov
+      name: Anton Vynohradov on LinkedIn
+    - icon: material/web
+      link: https://systemfromscratch.com
+      name: SystemFromScratch®
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: ["."]
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true

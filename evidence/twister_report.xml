@@ -1,0 +1,55 @@
+<testsuites>
+	<testsuite name="m2s010_mkr_kit/m2s010" timestamp="2026-10-26T19:51:19.282881" time="0.0" tests="1" failures="0" errors="0" skipped="1">
+		<properties>
+			<property name="version" value="2b6696d39565" />
+		</properties>
+		<testcase classname="sample.baton.node" name="sample.baton.node" time="0.00">
+			<skipped type="build" message="built only" />
+		</testcase>
+	</testsuite>
+	<testsuite name="native_sim/native/64" timestamp="2026-10-26T19:51:19.282881" time="1.9400000000000002" tests="40" failures="0" errors="0" skipped="0">
+		<properties>
+			<property name="version" value="2b6696d39565" />
+		</properties>
+		<testcase classname="baton.bus" name="baton.bus.baton_bus.disconnected_slave_is_reported_and_recovers" time="1.84" />
+		<testcase classname="baton.bus" name="baton.bus.baton_bus.heavy_noise_every_loss_is_reported" time="6.78" />
+		<testcase classname="baton.bus" name="baton.bus.baton_bus.noisy_line_loses_nothing" time="1.56" />
+		<testcase classname="baton.bus" name="baton.bus.baton_bus.events_slave_to_slave_exactly_once" time="0.56" />
+		<testcase classname="baton.bus" name="baton.bus.baton_bus.events_master_to_slave_exactly_once" time="0.58" />
+		<testcase classname="baton.bus" name="baton.bus.baton_bus.state_reaches_every_node" time="0.31" />
+		<testcase classname="baton.bus" name="baton.bus.baton_bus.api_errors" time="0.30" />
+		<testcase classname="baton.bus" name="baton.bus.baton_bus.start_twice" time="0.30" />
+		<testcase classname="baton.bus.seed_7" name="baton.bus.seed_7.baton_bus.disconnected_slave_is_reported_and_recovers" time="1.84" />
+		<testcase classname="baton.bus.seed_7" name="baton.bus.seed_7.baton_bus.heavy_noise_every_loss_is_reported" time="8.37" />
+		<testcase classname="baton.bus.seed_7" name="baton.bus.seed_7.baton_bus.noisy_line_loses_nothing" time="1.79" />
+		<testcase classname="baton.bus.seed_7" name="baton.bus.seed_7.baton_bus.events_slave_to_slave_exactly_once" time="0.56" />
+		<testcase classname="baton.bus.seed_7" name="baton.bus.seed_7.baton_bus.events_master_to_slave_exactly_once" time="0.58" />
+		<testcase classname="baton.bus.seed_7" name="baton.bus.seed_7.baton_bus.state_reaches_every_node" time="0.31" />
+		<testcase classname="baton.bus.seed_7" name="baton.bus.seed_7.baton_bus.api_errors" time="0.30" />
+		<testcase classname="baton.bus.seed_7" name="baton.bus.seed_7.baton_bus.start_twice" time="0.30" />
+		<testcase classname="baton.bus.seed_42" name="baton.bus.seed_42.baton_bus.disconnected_slave_is_reported_and_recovers" time="1.84" />
+		<testcase classname="baton.bus.seed_42" name="baton.bus.seed_42.baton_bus.heavy_noise_every_loss_is_reported" time="8.88" />
+		<testcase classname="baton.bus.seed_42" name="baton.bus.seed_42.baton_bus.noisy_line_loses_nothing" time="1.44" />
+		<testcase classname="baton.bus.seed_42" name="baton.bus.seed_42.baton_bus.events_slave_to_slave_exactly_once" time="0.56" />
+		<testcase classname="baton.bus.seed_42" name="baton.bus.seed_42.baton_bus.events_master_to_slave_exactly_once" time="0.58" />
+		<testcase classname="baton.bus.seed_42" name="baton.bus.seed_42.baton_bus.state_reaches_every_node" time="0.31" />
+		<testcase classname="baton.bus.seed_42" name="baton.bus.seed_42.baton_bus.api_errors" time="0.30" />
+		<testcase classname="baton.bus.seed_42" name="baton.bus.seed_42.baton_bus.start_twice" time="0.30" />
+		<testcase classname="baton.bus.seed_1234" name="baton.bus.seed_1234.baton_bus.disconnected_slave_is_reported_and_recovers" time="1.84" />
+		<testcase classname="baton.bus.seed_1234" name="baton.bus.seed_1234.baton_bus.heavy_noise_every_loss_is_reported" time="10.71" />
+		<testcase classname="baton.bus.seed_1234" name="baton.bus.seed_1234.baton_bus.noisy_line_loses_nothing" time="1.91" />
+		<testcase classname="baton.bus.seed_1234" name="baton.bus.seed_1234.baton_bus.events_slave_to_slave_exactly_once" time="0.56" />
+		<testcase classname="baton.bus.seed_1234" name="baton.bus.seed_1234.baton_bus.events_master_to_slave_exactly_once" time="0.58" />
+		<testcase classname="baton.bus.seed_1234" name="baton.bus.seed_1234.baton_bus.state_reaches_every_node" time="0.31" />
+		<testcase classname="baton.bus.seed_1234" name="baton.bus.seed_1234.baton_bus.api_errors" time="0.30" />
+		<testcase classname="baton.bus.seed_1234" name="baton.bus.seed_1234.baton_bus.start_twice" time="0.30" />
+		<testcase classname="baton.bus.seed_31337" name="baton.bus.seed_31337.baton_bus.disconnected_slave_is_reported_and_recovers" time="1.84" />
+		<testcase classname="baton.bus.seed_31337" name="baton.bus.seed_31337.baton_bus.heavy_noise_every_loss_is_reported" time="6.54" />
+		<testcase classname="baton.bus.seed_31337" name="baton.bus.seed_31337.baton_bus.noisy_line_loses_nothing" time="1.57" />
+		<testcase classname="baton.bus.seed_31337" name="baton.bus.seed_31337.baton_bus.events_slave_to_slave_exactly_once" time="0.56" />
+		<testcase classname="baton.bus.seed_31337" name="baton.bus.seed_31337.baton_bus.events_master_to_slave_exactly_once" time="0.58" />
+		<testcase classname="baton.bus.seed_31337" name="baton.bus.seed_31337.baton_bus.state_reaches_every_node" time="0.31" />
+		<testcase classname="baton.bus.seed_31337" name="baton.bus.seed_31337.baton_bus.api_errors" time="0.30" />
+		<testcase classname="baton.bus.seed_31337" name="baton.bus.seed_31337.baton_bus.start_twice" time="0.30" />
+	</testsuite>
+</testsuites>

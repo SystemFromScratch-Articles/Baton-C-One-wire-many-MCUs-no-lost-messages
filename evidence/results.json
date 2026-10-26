@@ -1,0 +1,115 @@
+{
+  "environment": {
+    "os": "Linux",
+    "zephyr_version": "2b6696d39565",
+    "toolchain": "zephyr/gnu",
+    "commit_date": "2026-10-26T19:30:32+01:00",
+    "run_date": "2026-10-26T18:51:18+00:00",
+    "options": {
+      "help": null,
+      "zephyr_base": null,
+      "quiet": 0,
+      "command": "twister",
+      "testsuite_root": [
+        "modules/lib/baton-c/zephyr"
+      ],
+      "platform": [
+        "native_sim/native/64",
+        "m2s010_mkr_kit/m2s010"
+      ],
+      "inline_logs": true,
+      "jobs": 2
+    }
+  },
+  "bus": [
+    {
+      "scenario": "baton.bus",
+      "platform": "native_sim/native/64",
+      "status": "passed",
+      "passed": 8,
+      "cases": 8,
+      "noise_corrupted": 14,
+      "noise_crc_errors": 20,
+      "noise_lost": 0,
+      "noise_sent": 200,
+      "heavy_down_delivered": 100,
+      "heavy_down_reported": 7,
+      "heavy_up_delivered": 93,
+      "heavy_up_reported": 7,
+      "heavy_sent": 100
+    },
+    {
+      "scenario": "baton.bus.seed_7",
+      "platform": "native_sim/native/64",
+      "status": "passed",
+      "passed": 8,
+      "cases": 8,
+      "noise_corrupted": 17,
+      "noise_crc_errors": 28,
+      "noise_lost": 0,
+      "noise_sent": 200,
+      "heavy_down_delivered": 100,
+      "heavy_down_reported": 0,
+      "heavy_up_delivered": 100,
+      "heavy_up_reported": 3,
+      "heavy_sent": 100
+    },
+    {
+      "scenario": "baton.bus.seed_42",
+      "platform": "native_sim/native/64",
+      "status": "passed",
+      "passed": 8,
+      "cases": 8,
+      "noise_corrupted": 11,
+      "noise_crc_errors": 18,
+      "noise_lost": 0,
+      "noise_sent": 200,
+      "heavy_down_delivered": 93,
+      "heavy_down_reported": 22,
+      "heavy_up_delivered": 80,
+      "heavy_up_reported": 20,
+      "heavy_sent": 100
+    },
+    {
+      "scenario": "baton.bus.seed_1234",
+      "platform": "native_sim/native/64",
+      "status": "passed",
+      "passed": 8,
+      "cases": 8,
+      "noise_corrupted": 20,
+      "noise_crc_errors": 32,
+      "noise_lost": 0,
+      "noise_sent": 200,
+      "heavy_down_delivered": 84,
+      "heavy_down_reported": 42,
+      "heavy_up_delivered": 62,
+      "heavy_up_reported": 42,
+      "heavy_sent": 100
+    },
+    {
+      "scenario": "baton.bus.seed_31337",
+      "platform": "native_sim/native/64",
+      "status": "passed",
+      "passed": 8,
+      "cases": 8,
+      "noise_corrupted": 14,
+      "noise_crc_errors": 24,
+      "noise_lost": 0,
+      "noise_sent": 200,
+      "heavy_down_delivered": 100,
+      "heavy_down_reported": 0,
+      "heavy_up_delivered": 100,
+      "heavy_up_reported": 0,
+      "heavy_sent": 100
+    }
+  ],
+  "memory": {
+    "library_code": 5986,
+    "glue_code": 1598,
+    "node_ram": 1256,
+    "thread_stack": 1024,
+    "image_text": 29348,
+    "image_data": 188,
+    "image_bss": 8204
+  }
+}

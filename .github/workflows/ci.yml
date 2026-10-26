@@ -1,0 +1,49 @@
+# Rebuilds the evidence of the article: the native_sim bus test (five noise
+# patterns) and the M2S010 MKR Kit sample, with the pinned west workspace.
+# SPDX-License-Identifier: Apache-2.0
+
+name: Evidence
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  twister:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: article
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Zephyr workspace
+        uses: zephyrproject-rtos/action-zephyr-setup@v1
+        with:
+          app-path: article
+          toolchains: arm-zephyr-eabi
+
+      - name: Run the tests of the article
+        run: article/scripts/test.sh -j 4
+
+      - name: Build the evidence tables
+        run: python article/scripts/evidence.py twister-out
+
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidence
+          path: |
+            article/evidence/
+            twister-out/twister.json

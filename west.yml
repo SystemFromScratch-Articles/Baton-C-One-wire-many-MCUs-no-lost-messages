@@ -1,0 +1,32 @@
+# West workspace of the article "Baton-C: one wire, many MCUs, no lost
+# messages". Zephyr and the Baton-C module, pinned for reproducible results.
+#
+#   west init -l article && west update -o=--depth=1 -n
+#
+# SPDX-License-Identifier: Apache-2.0
+
+manifest:
+  self:
+    path: article
+
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+    - name: antonvynohradov
+      url-base: https://github.com/AntonVynohradov
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      # The M2S010 MKR Kit board is in Zephyr from 4.5; pin v4.5.0 once tagged.
+      revision: main
+      import:
+        name-allowlist:
+          - cmsis_6
+
+    - name: baton-c
+      remote: antonvynohradov
+      repo-path: Baton-C
+      # Pin the release that ships the Zephyr module (v1.1.0) once tagged.
+      revision: feature/zephyr-module
+      path: modules/lib/baton-c

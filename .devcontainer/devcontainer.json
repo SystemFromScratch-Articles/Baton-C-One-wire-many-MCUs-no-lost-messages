@@ -1,0 +1,43 @@
+{
+    "name": "Baton-C on Zephyr (article workspace)",
+
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": ".."
+    },
+
+    "remoteUser": "root",
+
+    // The repository is the west manifest repository "article"; Zephyr and
+    // the modules are fetched next to it, into a volume kept between rebuilds.
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/article,type=bind,consistency=cached",
+    "workspaceFolder": "/workspace/article",
+
+    "mounts": [
+        "source=baton-article-west,target=/workspace,type=volume",
+        "source=baton-article-ccache,target=/ccache,type=volume"
+    ],
+
+    "containerEnv": {
+        "CCACHE_DIR": "/ccache",
+        "ZEPHYR_TOOLCHAIN_VARIANT": "zephyr",
+        "ZEPHYR_SDK_INSTALL_DIR": "/opt/zephyr-sdk"
+    },
+
+    "postCreateCommand": "bash scripts/setup.sh",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "marus25.cortex-debug",
+                "ms-vscode.vscode-serial-monitor"
+            ],
+            "settings": {
+                "C_Cpp.default.compileCommands": "/workspace/build/compile_commands.json",
+                "cmake.configureOnOpen": false
+            }
+        }
+    }
+}
