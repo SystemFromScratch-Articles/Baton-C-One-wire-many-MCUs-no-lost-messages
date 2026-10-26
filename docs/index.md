@@ -12,7 +12,7 @@ description: >-
 
 *Baton-C as a Zephyr module, from simulation to silicon.*
 
-**Anton Vynohradov** · Embedded Systems Engineer, SystemFromScratch® · October 2026
+**Anton Vynohradov** [:fontawesome-brands-orcid:{ .orcid-icon title="ORCID iD" }](https://orcid.org/0009-0005-6965-0911){ .orcid-link } · Embedded Systems Engineer, SystemFromScratch® · October 2026
 
 !!! abstract "In short"
     [Baton-C](https://github.com/AntonVynohradov/Baton-C) is a small C11 library that turns

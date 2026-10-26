@@ -1,0 +1,12 @@
+/* Article-specific styles (extra.css is shared with the Baton-C documentation). */
+
+/* ORCID iD next to the author name, in the ORCID brand color */
+.md-typeset a.orcid-link {
+  text-decoration: none;
+}
+
+.md-typeset .orcid-icon svg {
+  fill: #a6ce39;
+  height: 1.05em;
+  vertical-align: -0.12em;
+}

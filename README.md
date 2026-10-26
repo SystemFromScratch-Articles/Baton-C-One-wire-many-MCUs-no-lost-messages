@@ -47,6 +47,7 @@ updated for Zephyr 4.5 (Python 3.12+, Zephyr SDK 1.0).
 ## Author
 
 **Anton Vynohradov** — Embedded Systems Engineer · Founder of SystemFromScratch®
+· ORCID [0009-0005-6965-0911](https://orcid.org/0009-0005-6965-0911)
 · [LinkedIn](https://www.linkedin.com/in/vynohradov) · [GitHub](https://github.com/AntonVynohradov)
 
 ## License

@@ -57,6 +57,7 @@ theme:
 
 extra_css:
   - assets/stylesheets/extra.css
+  - assets/stylesheets/article.css
 
 extra:
   generator: false
@@ -64,6 +65,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/AntonVynohradov/Baton-C
       name: Baton-C on GitHub
+    - icon: fontawesome/brands/orcid
+      link: https://orcid.org/0009-0005-6965-0911
+      name: Anton Vynohradov on ORCID
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/vynohradov
       name: Anton Vynohradov on LinkedIn
@@ -88,3 +92,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg

@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you refer to this article or reuse its material, please cite it as below."
+type: software
+title: "One Wire, Many MCUs, No Lost Messages: Baton-C as a Zephyr Module"
+abstract: >-
+  Article and reproducible evidence: Baton-C, a deterministic single-wire UART bus
+  in MISRA C, integrated into Zephyr RTOS as a module, tested as a three-node bus
+  with line noise on native_sim, and brought up on a Microchip SmartFusion2 board.
+authors:
+  - family-names: Vynohradov
+    given-names: Anton
+    orcid: "https://orcid.org/0009-0005-6965-0911"
+    affiliation: SystemFromScratch
+    website: "https://systemfromscratch.com"
+repository-code: "https://github.com/SystemFromScratch-Articles/Baton-C-One-wire-many-MCUs-no-lost-messages"
+url: "https://systemfromscratch-articles.github.io/Baton-C-One-wire-many-MCUs-no-lost-messages/"
+license: Apache-2.0
+date-released: "2026-10-26"
+keywords:
+  - Zephyr RTOS
+  - embedded systems
+  - UART
+  - single-wire bus
+  - MISRA C
+  - SmartFusion2
+references:
+  - type: software
+    title: Baton-C
+    authors:
+      - family-names: Vynohradov
+        given-names: Anton
+        orcid: "https://orcid.org/0009-0005-6965-0911"
+    repository-code: "https://github.com/AntonVynohradov/Baton-C"
+    license: Apache-2.0
